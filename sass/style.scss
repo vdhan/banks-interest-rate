@@ -1,0 +1,109 @@
+/*
+Banks interest rate
+Copyright (C) 2016 Hoàng Ân
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+table {
+	td, th {
+		text-align: center;
+		vertical-align: middle !important;
+	}
+}
+
+.img-thumbnail {
+	max-height: 50px;
+	min-width: 85px;
+}
+
+@mixin heading($size) {
+	font-size: $size;
+	font-weight: bold;
+}
+
+@mixin respond($text, $h1: $text + 1.2, $h2: $text + 0.9, $h3: $text + 0.6,
+	$h4: $text + 0.3, $h5: $text - 0.2, $h6: $text - 0.4) {
+	.text-respond {
+		font-size: $text;
+
+		h1 {
+			@include heading($h1);
+		}
+
+		h2 {
+			@include heading($h2);
+		}
+
+		h3 {
+			@include heading($h3);
+		}
+
+		h4 {
+			@include heading($h4);
+		}
+
+		h5 {
+			@include heading($h5);
+		}
+
+		h6 {
+			@include heading($h6);
+		}
+	}
+
+	h1.text-respond {
+		@include heading($h1);
+	}
+
+	h2.text-respond {
+		@include heading($h2);
+	}
+
+	h3.text-respond {
+		@include heading($h3);
+	}
+
+	h4.text-respond {
+		@include heading($h4);
+	}
+
+	h5.text-respond {
+		@include heading($h5);
+	}
+
+	h6.text-respond {
+		@include heading($h6);
+	}
+}
+
+@media (max-width: 479px) {
+	@include respond(3.4vw);
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	@include respond(2.6vw);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	@include respond(2vw);
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	@include respond(1.6vw);
+}
+
+@media (min-width: 1200px) {
+	@include respond(1.4vw);
+}
